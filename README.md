@@ -8,7 +8,7 @@
 
 NU 「 no-ui 」 组件库系统 nu-system，弹窗组件 VUE 版本。
 
-`@y-fe/nu-dialog-vue` 本身不会输出任何样式，基础样式来自于 [nu-dialog](https://yued-fe.github.io/nu-system/packages/dialog/) , 
+`@y-fe/nu-dialog-vue` 本身不会输出任何样式，基础样式来自于 [nu-dialog](https://nu-system.github.io/vanilla/dialog/) , 
 
 ## 怎么用？
 

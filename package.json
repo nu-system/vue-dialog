@@ -1,23 +1,21 @@
 {
   "name": "@y-fe/nu-dialog-vue",
   "version": "0.0.12",
-  "description": "NU 「 no-ui 」 组件库系统 nu-system，弹窗组件 VUE 实现",
-  "main": "lib/index.js",
-  "repository": "git@github.com:yued-fe/nu-vue.git",
+  "description": "NU 「 no-ui 」 组件库系统 nu-system，按钮组件 VUE 实现",
+  "repository": "git@github.com:nu-system/dialog.git",
   "author": "yfe-team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yued-fe/nu-vue/issues"
+    "url": "https://github.com/nu-system/dialog-vue/issues"
   },
-  "homepage": "https://yued-fe.github.io/nu-vue/packages/dialog",
+  "homepage": "https://nu-system.github.io/vue/dialog/",
+  "main": "lib/index.js",
   "keywords": [
     "ui",
     "no-ui",
     "nu-system",
     "vue",
-    "vue",
     "vue-ui",
-    "dialog",
-    "modal"
+    "button"
   ]
 }
