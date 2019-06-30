@@ -1,4 +1,4 @@
-# nu-dialog-vue
+# nu-vue-dialog
 
 <iframe src="https://codesandbox.io/embed/vue-template-phc9q?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2FDialog.vue&view=preview" title="nu-dialog-vue" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
@@ -8,15 +8,12 @@
 
 NU 「 no-ui 」 组件库系统 nu-system，弹窗组件 VUE 版本。
 
-`@y-fe/nu-dialog-vue` 本身不会输出任何样式，基础样式来自于 [nu-dialog](https://nu-system.github.io/vanilla/dialog/) , 
+`nu-vue-dialog` 本身不会输出任何样式，基础样式来自于 [nu-dialog](https://nu-system.github.io/vanilla/dialog/) , 
 
 ## 怎么用？
 
 ```bash
-$ npm i @y-fe/nu-dialog-vue @y-fe/nu-dialog
-
-// or yarn
-$ yarn add @y-fe/nu-dialog-vue @y-fe/nu-dialog
+$ yarn add @_nu/vue-dialog @_nu/vanilla-dialog
 ```
 
 ### 二次封装
@@ -27,10 +24,10 @@ $ yarn add @y-fe/nu-dialog-vue @y-fe/nu-dialog
   import NuDialog from "@y-fe/nu-dialog-vue"
   import "@y-fe/nu-dialog"
   import "@y-fe/nu-dialog/css/position/middle.css"
-  // import "@y-fe/nu-dialog/css/position/top.css"
-  // import "@y-fe/nu-dialog/css/position/left.css"
-  // import "@y-fe/nu-dialog/css/position/right.css"
-  // import "@y-fe/nu-dialog/css/position/bottom.css"
+  // import "@_nu/vanilla-dialog/css/position/top.css"
+  // import "@_nu/vanilla-dialog/css/position/left.css"
+  // import "@_nu/vanilla-dialog/css/position/right.css"
+  // import "@_nu/vanilla-dialog/css/position/bottom.css"
 
   export default NuDialog;
 </script>
