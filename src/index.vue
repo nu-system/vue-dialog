@@ -61,7 +61,7 @@
 
                 // 是否显示弹窗
                 if (this.show) {
-                    ret._on = true;
+                    ret._open = true;
                 }
 
                 // 设置弹窗方向

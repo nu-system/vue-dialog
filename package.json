@@ -1,7 +1,10 @@
 {
   "name": "@_nu/vue-dialog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NU 「 no-ui 」 组件库系统 nu-system，按钮组件 VUE 实现",
+  "scripts": {
+    "build":"vue-cli-service build --target lib --name index  --dest lib  ./index.js"
+  },
   "repository": "git@github.com:nu-system/vue-dialog.git",
   "author": "yfe-team",
   "license": "MIT",
@@ -9,7 +12,7 @@
     "url": "https://github.com/nu-system/vue-dialog/issues"
   },
   "homepage": "https://nu-system.github.io/vue/dialog/",
-  "main": "lib/index.js",
+  "main": "lib/index.common.js",
   "keywords": [
     "ui",
     "no-ui",
