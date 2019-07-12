@@ -1,17 +1,11 @@
-# nu-vue-dialog
+# Dialog
 
-[![npm package][npm-badge]][npm]
+[![npm package](https://img.shields.io/npm/v/@_nu/vue-dialog.svg)](https://www.npmjs.org/package/@_nu/vue-dialog)
+[![github](https://img.shields.io/github/stars/nu-system/vue-dialog.svg?style=social)](https://github.com/nu-system/vue-dialog)
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/@_nu/vue-dialog
+<iframe src="https://codesandbox.io/embed/nudialogvue-phc9q?autoresize=1&fontsize=14&hidenavigation=1&view=preview" title="nu-dialog-vue" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-<iframe src="https://codesandbox.io/embed/vue-template-phc9q?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcomponents%2FDialog.vue&view=preview" title="nu-dialog-vue" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
-<ClientOnly>
-<DialogDemo/>
-</ClientOnly>
-
-NU 「 no-ui 」 组件库系统 nu-system，弹窗组件 VUE 版本。
+组件库母版系统 [NU-system](https://nu-system.github.io/) 弹窗组件 VUE 实现。
 
 `nu-vue-dialog` 本身不会输出任何样式，基础样式来自于 [nu-dialog](https://nu-system.github.io/vanilla/dialog/) , 
 
@@ -27,23 +21,20 @@ $ yarn add @_nu/vue-dialog @_nu/vanilla-dialog
 
 <script>
   import NuDialog from "@_nu/vue-dialog"
-  import "@_nu/vanilla-dialog"
-  import "@_nu/vanilla-dialog/css/position/middle.css"
-  // import "@_nu/vanilla-dialog/css/position/top.css"
-  // import "@_nu/vanilla-dialog/css/position/left.css"
-  // import "@_nu/vanilla-dialog/css/position/right.css"
-  // import "@_nu/vanilla-dialog/css/position/bottom.css"
-
   export default NuDialog;
 </script>
 
-<style>
-  /* 规避 position:fixed 的 bug 问题 */
-  .nu_dialog_wrap{
-    position: absolute;
-  }
-</style>
+<!--样式引用-->
+<style src="@_nu/vanilla-dialog"></style>
+<style src="@_nu/vanilla-dialog/css/position/middle.css"></style>
+<!-- 
+<style src="@_nu/vanilla-dialog/css/position/top.css"></style>
+<style src="@_nu/vanilla-dialog/css/position/left.css"></style>
+<style src="@_nu/vanilla-dialog/css/position/right.css"></style>
+<style src="@_nu/vanilla-dialog/css/position/bottom.css"></style> 
+-->
 ```
+
 
 ### 使用
 
@@ -123,4 +114,3 @@ nu-dialog-vue 会动态的把弹窗添加到 `body` 标签之后。
 ```
 
 `nu-dialog-vue` 几乎所有都子组件都可以用 `slot` 重写。
-
