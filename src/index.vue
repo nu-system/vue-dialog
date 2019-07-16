@@ -106,7 +106,7 @@
              */
             handleClickMask(e) {
                 e.preventDefault();
-                this.$emit('onClickMask');
+                this.$emit('clickmask');
             },
             /**
              * 当关闭按钮点击的时候触发
