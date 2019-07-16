@@ -119,17 +119,21 @@ describe('NuDialog开关问题', () => {
             },16)
         })
     })
-    // it('用户快速快关，有bug',async ()=>{
-    //     const wrapper = mount(NuDialog)
-    //     wrapper.setProps({open:true})
-    //     wrapper.setProps({open:false})
-    //     await new Promise((rs,rj)=>{
-    //         setTimeout(()=>{
-    //             console.log(wrapper.vm.show,wrapper.vm.render)
-    //             rs()
-    //         },300)
-    //     })
-    // })
+    it('用户快速快关',async ()=>{
+        const wrapper = mount(NuDialog)
+        wrapper.setProps({open:true})
+        wrapper.setProps({open:false})
+        wrapper.setProps({open:true})
+        wrapper.setProps({open:true})
+        wrapper.setProps({open:false})
+        await new Promise((rs,rj)=>{
+            setTimeout(()=>{
+                expect(wrapper.vm.show).toEqual(false)
+                expect(wrapper.vm.render).toEqual(false)
+                rs()
+            },300)
+        })
+    })
 })
 
 describe('beforeClose api',()=>{

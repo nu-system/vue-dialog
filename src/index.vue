@@ -22,7 +22,8 @@
         data() {
             return {
                 show: false,
-                render: this.open
+                render: this.open,
+                timecount:null
             }
         },
         props: {
@@ -73,18 +74,20 @@
         },
         methods: {
             handleOpen() {
+               clearTimeout(this.timecount)
                 this.render = true;
                 document.body.appendChild(this.$el);
                 // 动画的时间
-                setTimeout(() => {
+                this.timecount=setTimeout(() => {
                     this.show = true;
                 }, 16);
                 document.body.classList.add('nu_dialog_open');
             },
             dialogClose() {
+                clearTimeout(this.timecount)
                 this.show = false;
                 // 动画的时间
-                setTimeout(() => {
+                this.timecount=setTimeout(() => {
                     this.render = false;
                 }, this.speed);
                 document.body.classList.remove('nu_dialog_open');
