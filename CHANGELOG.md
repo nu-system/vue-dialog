@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* **component:** recover the isPortal what I have removed before ([ecf825f](https://github.com/nu-system/vue-dialog/commit/ecf825f))
+* recover the isPortal what I have removed before ([75dd012](https://github.com/nu-system/vue-dialog/commit/75dd012))
 
 
 
