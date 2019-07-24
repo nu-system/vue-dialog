@@ -1,4 +1,4 @@
-import Dialog from "./src/index.vue";
+import Dialog from "./index.vue";
 
 /* istanbul ignore next */
 Dialog.install = function(Vue) {

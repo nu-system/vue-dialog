@@ -1,10 +1,20 @@
 {
   "name": "@_nu/vue-dialog",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "NU 「 no-ui 」 组件库系统 nu-system，按钮组件 VUE 实现",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name index  --dest lib  ./index.js"
+    "build": "vue-cli-service build --target lib --name index  --dest lib  src/index.js",
+    "prepublishOnly": "npm run build",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "commitInit": "commitizen init cz-conventional-changelog --yarn --dev --exact"
   },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "contributors": "https://github.com/nu-system/vue-dialog/graphs/contributors",
   "repository": {
     "type": "git",
@@ -12,9 +22,6 @@
   },
   "author": "yfe-team",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nu-system/vue-dialog/issues"
-  },
   "homepage": "https://nu-system.github.io/vue/dialog/",
   "main": "lib/index.common.js",
   "keywords": [
@@ -24,5 +31,18 @@
     "vue",
     "vue-ui",
     "button"
-  ]
+  ],
+  "dependencies": {
+    "@vue/cli-service-global": "^3.9.3"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.21",
+    "cz-conventional-changelog": "^3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
