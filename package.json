@@ -1,11 +1,20 @@
 {
   "name": "@_nu/vue-dialog",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "NU 「 no-ui 」 组件库系统 nu-system，按钮组件 VUE 实现",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name index  --dest lib  ./index.js",
-    "test": "jest"
+    "build": "vue-cli-service build --target lib --name index  --dest lib  src/index.js",
+    "prepublishOnly": "npm run build",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "commitInit": "commitizen init cz-conventional-changelog --yarn --dev --exact"
   },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "contributors": "https://github.com/nu-system/vue-dialog/graphs/contributors",
   "repository": {
     "type": "git",
@@ -13,9 +22,6 @@
   },
   "author": "yfe-team",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nu-system/vue-dialog/issues"
-  },
   "homepage": "https://nu-system.github.io/vue/dialog/",
   "main": "lib/index.common.js",
   "keywords": [
@@ -27,17 +33,16 @@
     "button"
   ],
   "dependencies": {
-    "@vue/server-test-utils": "^1.0.0-beta.29",
-    "@vue/test-utils": "^1.0.0-beta.29",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^24.8.0",
-    "babel-preset-env": "^1.7.0",
-    "jest": "^24.8.0",
-    "jest-serializer-vue": "^2.0.2",
-    "sinon": "^7.3.2",
-    "vue": "^2.6.10",
-    "vue-jest": "^3.0.4",
-    "vue-server-renderer": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-service-global": "^3.9.3"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.21",
+    "cz-conventional-changelog": "^3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
