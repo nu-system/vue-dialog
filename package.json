@@ -1,15 +1,15 @@
 {
   "name": "@_nu/vue-dialog",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "NU 「 no-ui 」 组件库系统 nu-system，按钮组件 VUE 实现",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name index  --dest lib  src/index.js",
+    "build": "vue-cli-service build --target lib ./src/index.vue --name index",
     "prepublishOnly": "npm run build",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commitInit": "commitizen init cz-conventional-changelog --yarn --dev --exact"
   },
   "files": [
-    "lib",
+    "dist",
     "CHANGELOG.md",
     "README.md",
     "LICENSE",
@@ -23,7 +23,7 @@
   "author": "yfe-team",
   "license": "MIT",
   "homepage": "https://nu-system.github.io/vue/dialog/",
-  "main": "lib/index.common.js",
+  "main": "dist/index.umd.min.js",
   "keywords": [
     "ui",
     "no-ui",
@@ -32,13 +32,20 @@
     "vue-ui",
     "button"
   ],
-  "dependencies": {
-    "@vue/cli-service-global": "^3.9.3"
-  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-service": "^3.2.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "commitizen": "^4.0.3",
     "conventional-changelog-cli": "^2.0.21",
-    "cz-conventional-changelog": "^3.0.2"
+    "cz-conventional-changelog": "^3.0.2",
+    "vue-template-compiler": "^2.6.9"
   },
   "config": {
     "commitizen": {
