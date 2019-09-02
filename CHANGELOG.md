@@ -1,5 +1,5 @@
 ## [0.0.8](https://github.com/nu-system/vue-dialog/compare/v0.0.5...v0.0.8) (2019-09-02)
-* 修改da
+
 
 ### Bug Fixes
 
